@@ -109,6 +109,14 @@ module.exports = function(grunt) {
                     dest: 'tmp/'
                 }, ]
             },
+            spinkit: {
+                files: [{
+                    expand: true,
+                    cwd: 'bower_components/spinkit/css/spinners/',
+                    src: ['7-three-bounce.css'],
+                    dest: 'tmp/css'
+                }, ]
+            },
             sitemap: {
                 files: [{
                     expand: true,
