@@ -66,18 +66,13 @@
 			</div>
 		<div class="text-center">
 		<h2 class="bientot text-danger">Prochaine <strong>Vente Privée</strong></h2>
-	</div>
-	<div class="row text-center hidden-xs">
-			<a href="#vp-noel" class="btn-intro btn-detail page-scroll btn btn-xl">Détails et  Tarifs</a>
-	</div>
-	<div class="row text-center hidden-xs">
-			<a href="#contact" class="btn-intro btn-detail page-scroll btn btn-xl">Contact</a>
-	</div>
-	<div>
-		<img  alt="Sapin" title="Sapin"
-		src="img/produits/vp/noel/nks-flowers-header-sapin.jpg"
-		class="img-responsive sapin-img" />
-	</div>
+		</div>
+		<div class="row text-center hidden-xs">
+				<a href="#vp-noel" class="btn-intro btn-detail page-scroll btn btn-xl">Détails et  Tarifs</a>
+		</div>
+		<div class="row text-center hidden-xs">
+				<a href="#contact" class="btn-intro btn-detail page-scroll btn btn-xl">Contact</a>
+		</div>
 	</div>
 	<div class="col-sm-12 col-md-8">
 		<div class="row" id="green">
@@ -254,7 +249,22 @@
 									</p>
 									<p>
 									<i class="fa fa-2x fa-info-circle text-danger"> </i>
-									A partir de 50 Sapins commandés, 1 Poinsettia <strong class="text-danger">offerte</strong> par sapin
+									A partir de 50 Sapins commandés,
+									<span data-toggle="popover"
+									data-trigger="focus hover click"
+									data-placement="top"
+									title="Poinsettia offert"
+									data-content-id="#poinsettia-cadeau">1 Poinsettia <strong class="text-danger">offert <i class="fa fa-question-circle fa-1x"> </i></strong>
+
+									<span>par sapin
+									<div id="poinsettia-cadeau" class="hidden">
+										<div class="row">
+											<img src="img/produits/vp/noel/nks-flowers-Poinsettia-offert.jpg" alt="Poinsettia offert pour les commandes supérieures à 50 sapins" title="Poinsettia offert" class="img-responsive"/>
+											<div class="non-contractuelle">
+												Photo non contractuelle
+											</div>
+									</div>
+									</div>
 									</p>
 							</div>
 						</div>

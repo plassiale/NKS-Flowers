@@ -3594,7 +3594,7 @@ tagAnalyticsCNIL.CookieConsent.start();
 /* When DOM is loaded*/
 $(document).ready(
 		function() {
-			
+
 			// jQuery for page scrolling feature - requires jQuery Easing plugin
 			$('a.page-scroll').bind('click', function(event) {
 		        var $anchor = $(this);
@@ -3673,6 +3673,14 @@ $(document).ready(
       $("#header-carousel").swipeleft(function() {
             $(this).carousel('next');
        });
+
+			 $('[data-toggle="popover"]').popover({
+			   html: true,
+			   content: function () {
+					 var id = $(this).attr('data-content-id');
+			     return $(id).html();
+			   }
+			 });
 
 			 // init wow.js
  			new WOW( {
