@@ -386,7 +386,7 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Erreur lors de l'envoi de votre message, merci de re-essayer plus tart ou contactez nous directement contact@ma-boite-a-fleurs.fr</strong>");
+                    $('#success > .alert-danger').append("<strong>Erreur lors de l'envoi de votre message, merci de re-essayer plus tart ou contactez nous directement contact@nks-flowers.fr</strong>");
                     $('#success > .alert-danger').append('</div>');
                 },
             })
