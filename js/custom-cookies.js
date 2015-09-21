@@ -33,15 +33,15 @@ tagAnalyticsCNIL.CookieConsent = function() {
 
     //Affiche une  bannière d'information en haut de la page
      function showBanner(){
-        var bodytag = document.getElementsByTagName('nav')[0];
+        var bodytag = document.getElementsByTagName('header')[0];
         var div = document.createElement('div');
         div.setAttribute('id','cookie-banner');
         div.setAttribute('width','100%');
         // Le code HTML de la demande de consentement
-        div.innerHTML =  '<div style="top:0px;width:100%;position:fixed;background-color:#fff;text-align:center;padding:5px;font-size:12px;\
-        border-bottom:1px solid #eeeeee;" id="cookie-banner-message" align="center">Ce site utilise Google\
-        Analytics. En continuant &agrave; naviguer, vous nous autorisez &agrave; d&eacute;poser un cookie &agrave; des fins de mesure\
-        d\'audience.<a href="javascript:tagAnalyticsCNIL.CookieConsent.hideInform();" style="text-decoration:underline;">Continuer</a>  <a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()" \
+        div.innerHTML =  '<div style="    z-index: 1; top:0px;width:100%;position:fixed;background-color:#fff;text-align:center;padding:5px;font-size:12px;\
+        border-bottom:1px solid #eeeeee;" id="cookie-banner-message" align="center">En continuant votre navigation sur ce site, \
+        vous acceptez l\'utilisation des cookies afin d\'assurer le bon déroulement de votre visite \
+        et de réaliser des statistiques d\'audience.<a href="javascript:tagAnalyticsCNIL.CookieConsent.hideInform();" style="text-decoration:underline;">Continuer</a>  <a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()" \
         style="text-decoration:underline;"> En savoir plus</a>.</div>';
         // Vous pouvez modifier le contenu ainsi que le style
         // Ajoute la bannière juste au début de la page
@@ -135,6 +135,7 @@ tagAnalyticsCNIL.CookieConsent = function() {
         div.style.height= window.innerHeight+"px";
         div.style.display= "none";
         div.style.position= "fixed";
+        div.style.zIndex = "1";
         // Le code HTML de la demande de consentement
         // Vous pouvez modifier le contenu ainsi que le style
         div.innerHTML =  '<div class="text-muted text-justify" style="width: 300px; background-color: white; repeat scroll 0% 0% white;\
