@@ -358,6 +358,7 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+
             $.ajax({
                 url: "././mail/contact_me.php",
                 type: "POST",
@@ -368,8 +369,11 @@ $(function() {
                     message: message
                 },
                 cache: false,
-                success: function() {
+                success: function(data,status,xhr) {
+
                     // Success message
+                  if(data.indexOf('OK') != -1)
+                  {
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -377,17 +381,28 @@ $(function() {
                         .append("<strong>Votre message a été envoyé. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
-
                     //clear all fields
                     $('#contactForm').trigger("reset");
+
+                  }
+                  else
+                  {
+                    $('#success').html("<div class='alert alert-danger'>");
+                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#success > .alert-danger').append("<strong>Erreur technique lors de l'envoi de votre message, merci de re-essayer plus tart ou contactez nous directement contact@nks-flowers.fr</strong>");
+                    $('#success > .alert-danger').append('</div>');
+
+                  }
                 },
-                error: function() {
+                error: function(xhr,status,error) {
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-danger').append("<strong>Erreur lors de l'envoi de votre message, merci de re-essayer plus tart ou contactez nous directement contact@nks-flowers.fr</strong>");
                     $('#success > .alert-danger').append('</div>');
+
                 },
             })
         },
