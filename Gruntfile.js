@@ -144,7 +144,8 @@ module.exports = function(grunt) {
                     paths: ["css"]
                 },
                 files: {
-                    "tmp/css/custom.css": "less/custom.less"
+                    "tmp/css/custom.css": "less/custom.less",
+                    "tmp/css/vp.css": "less/vp.less"
                 }
             }
         },
