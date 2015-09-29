@@ -3273,7 +3273,7 @@ var tagAnalyticsCNIL = {}
 
 tagAnalyticsCNIL.CookieConsent = function() {
 
-    var gaProperty = 'UA-65364486-1'
+    var gaProperty = 'UA-65364486-2'
     // Désactive le tracking si le cookie d'Opt-out existe déjà .
     var disableStr = 'ga-disable-' + gaProperty;
     var firstCall = false;
