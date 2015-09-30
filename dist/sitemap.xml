@@ -51,4 +51,10 @@
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
+<url>
+  <!-- VP Noel -->
+  <loc>http://nks-flowers.fr/index-vp-sapin.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
 </urlset>

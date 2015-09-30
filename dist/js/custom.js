@@ -358,6 +358,7 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+
             $.ajax({
                 url: "././mail/contact_me.php",
                 type: "POST",
@@ -368,8 +369,11 @@ $(function() {
                     message: message
                 },
                 cache: false,
-                success: function() {
+                success: function(data,status,xhr) {
+
                     // Success message
+                  if(data.indexOf('OK') != -1)
+                  {
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -377,17 +381,28 @@ $(function() {
                         .append("<strong>Votre message a été envoyé. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
-
                     //clear all fields
                     $('#contactForm').trigger("reset");
+
+                  }
+                  else
+                  {
+                    $('#success').html("<div class='alert alert-danger'>");
+                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#success > .alert-danger').append("<strong>Erreur technique lors de l'envoi de votre message, merci de re-essayer plus tart ou contactez nous directement contact@nks-flowers.fr</strong>");
+                    $('#success > .alert-danger').append('</div>');
+
+                  }
                 },
-                error: function() {
+                error: function(xhr,status,error) {
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Erreur lors de l'envoi de votre message, merci de re-essayer plus tart ou contactez nous directement contact@ma-boite-a-fleurs.fr</strong>");
+                    $('#success > .alert-danger').append("<strong>Erreur lors de l'envoi de votre message, merci de re-essayer plus tart ou contactez nous directement contact@nks-flowers.fr</strong>");
                     $('#success > .alert-danger').append('</div>');
+
                 },
             })
         },
@@ -3339,7 +3354,7 @@ var tagAnalyticsCNIL = {}
 
 tagAnalyticsCNIL.CookieConsent = function() {
 
-    var gaProperty = 'UA-65364486-1'
+    var gaProperty = 'UA-65364486-2'
     // Désactive le tracking si le cookie d'Opt-out existe déjà .
     var disableStr = 'ga-disable-' + gaProperty;
     var firstCall = false;
@@ -3369,10 +3384,10 @@ tagAnalyticsCNIL.CookieConsent = function() {
         div.setAttribute('id','cookie-banner');
         div.setAttribute('width','100%');
         // Le code HTML de la demande de consentement
-        div.innerHTML =  '<div style="top:0px;width:100%;position:fixed;background-color:#fff;text-align:center;padding:5px;font-size:12px;\
-        border-bottom:1px solid #eeeeee;" id="cookie-banner-message" align="center">Ce site utilise Google\
-        Analytics. En continuant &agrave; naviguer, vous nous autorisez &agrave; d&eacute;poser un cookie &agrave; des fins de mesure\
-        d\'audience.<a href="javascript:tagAnalyticsCNIL.CookieConsent.hideInform();" style="text-decoration:underline;">Continuer</a>  <a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()" \
+        div.innerHTML =  '<div style="    z-index: 1; top:0px;width:100%;position:fixed;background-color:#fff;text-align:center;padding:5px;font-size:12px;\
+        border-bottom:1px solid #eeeeee;" id="cookie-banner-message" align="center">En continuant votre navigation sur ce site, \
+        vous acceptez l\'utilisation des cookies afin d\'assurer le bon déroulement de votre visite \
+        et de réaliser des statistiques d\'audience.<a href="javascript:tagAnalyticsCNIL.CookieConsent.hideInform();" style="text-decoration:underline;">Continuer</a>  <a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()" \
         style="text-decoration:underline;"> En savoir plus</a>.</div>';
         // Vous pouvez modifier le contenu ainsi que le style
         // Ajoute la bannière juste au début de la page
@@ -3466,6 +3481,7 @@ tagAnalyticsCNIL.CookieConsent = function() {
         div.style.height= window.innerHeight+"px";
         div.style.display= "none";
         div.style.position= "fixed";
+        div.style.zIndex = "1";
         // Le code HTML de la demande de consentement
         // Vous pouvez modifier le contenu ainsi que le style
         div.innerHTML =  '<div class="text-muted text-justify" style="width: 300px; background-color: white; repeat scroll 0% 0% white;\
@@ -3594,7 +3610,7 @@ tagAnalyticsCNIL.CookieConsent.start();
 /* When DOM is loaded*/
 $(document).ready(
 		function() {
-			
+
 			// jQuery for page scrolling feature - requires jQuery Easing plugin
 			$('a.page-scroll').bind('click', function(event) {
 		        var $anchor = $(this);
@@ -3673,6 +3689,21 @@ $(document).ready(
       $("#header-carousel").swipeleft(function() {
             $(this).carousel('next');
        });
+
+			 $('[data-toggle="popover"]').popover({
+			   html: true,
+			   content: function () {
+					 var id = $(this).attr('data-content-id');
+			     if(id)
+					 {
+						 return $(id).html();
+					 }
+					 else
+					 {
+						 return  $(this).attr('data-content');
+					 }
+			   }
+			 });
 
 			 // init wow.js
  			new WOW( {
