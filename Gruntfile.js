@@ -126,6 +126,11 @@ module.exports = function(grunt) {
                 }, ]
             },
             html: {
+                options: {
+                  process: function (content, srcpath) {
+                    return content.split('${version}').join(grunt.config.get('pkg.version'));
+                  }
+                },
                 src: ['*.html'],
                 dest: 'dist/'
             },
