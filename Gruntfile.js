@@ -132,7 +132,7 @@ module.exports = function(grunt) {
                   }
                 },
                 src: ['*.html'],
-                dest: 'dist/'
+                dest: 'tmp/html/'
             },
             php: {
                 src: ['**/*.php'],
@@ -169,10 +169,13 @@ module.exports = function(grunt) {
             dist: {
               options: {
                 removeComments: true,
-                collapseWhitespace: true
+                collapseWhitespace: true,
+                useShortDoctype : true,
+                minifyJS : true,
+                minifyCSS : true
               },
               expand: true,
-              cwd: 'dist',
+              cwd: 'tmp/html',
               src: ['*.html'],
               dest: 'dist/'
               }
