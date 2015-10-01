@@ -135,7 +135,7 @@ module.exports = function(grunt) {
                 dest: 'tmp/html/'
             },
             php: {
-                src: ['**/*.php'],
+                src: ['mail/*.php'],
                 dest: 'dist/'
             },
             img: {
