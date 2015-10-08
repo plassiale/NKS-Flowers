@@ -122,7 +122,7 @@ module.exports = function(grunt) {
                 dest: 'dist/'
             },
             php: {
-                src: ['**/*.php'],
+                src: ['mail/*.php'],
                 dest: 'dist/'
             },
             img: {
