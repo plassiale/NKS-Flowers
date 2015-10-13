@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         clean : {
         	dist: {
-        	      src: ['dist/**','tmp/**','deploy/**']
+        	      src: ['dist/**','tmp/**']
         	    }
         },
         connect: {
@@ -40,12 +40,6 @@ module.exports = function(grunt) {
             }
         },
         copy: {
-          deploy: {
-              expand: true,
-              src: '*',
-              cwd: 'dist/',
-              dest: 'deploy/'
-          },
           htacess: {
               expand: true,
               src: '.htaccess',
@@ -205,7 +199,7 @@ module.exports = function(grunt) {
         },
         exec : {
           deploy_github : {
-            cmd : "git subtree push --prefix deploy origin gh-pages"
+            cmd : "git subtree push --prefix dist origin gh-pages"
           },
           clean_github : {
             cmd : "git push origin :gh-pages"
@@ -228,6 +222,6 @@ module.exports = function(grunt) {
     // Default task(s).
     grunt.registerTask('init', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin']);
     grunt.registerTask('default', ['init','connect','watch']);
-    grunt.registerTask('deploy_github', ['init','copy:deploy','exec:deploy_github','clean']);
+    grunt.registerTask('deploy_github', ['init','exec:deploy_github','clean']);
     grunt.registerTask('clean_github', ['exec:clean_github']);
 };
