@@ -13,9 +13,8 @@ Header append Vary User-Agent env=!dont-vary
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteRule vp-(.*).html /index-vp-sapin-noel.html [R=301,L]
-RewriteRule box-(.*).html /index-vp-sapin-noel.html [R=301,L]
-RewriteRule index.html /index-vp-sapin-noel.html [R=301,L]
+RewriteRule /vp-(.*).html /index.html [R=301,L]
+RewriteRule /box-(.*).html /index.html [R=301,L]
 </IfModule>
 
 # BEGIN Expire headers
