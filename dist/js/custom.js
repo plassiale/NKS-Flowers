@@ -3380,7 +3380,7 @@ tagAnalyticsCNIL.CookieConsent = function() {
 
     //Affiche une  bannière d'information en haut de la page
      function showBanner(){
-        var bodytag = document.getElementsByTagName('nav')[0];
+        var bodytag = document.getElementsByTagName('body')[0];
         var div = document.createElement('div');
         div.setAttribute('id','cookie-banner');
         div.setAttribute('width','100%');
