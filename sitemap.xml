@@ -12,6 +12,11 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>http://nks-flowers.fr/index-vp-sapin-noel.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>http://nks-flowers.fr/popup-vp-noel.html</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
