@@ -213,6 +213,14 @@ module.exports = function(grunt) {
                     livereload: true
                 }
             }
+        },
+        exec : {
+          deploy_github : {
+            cmd : "git subtree push --prefix dist origin gh-pages"
+          },
+          clean_github : {
+            cmd : "git push origin :gh-pages"
+          }
         }
     });
 
@@ -224,10 +232,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-cssmin')
-    grunt.loadNpmTasks('grunt-contrib-htmlmin')
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-exec');
 
     // Default task(s).
-    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin','connect','watch']);
-
+    grunt.registerTask('init', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin']);
+    grunt.registerTask('default', ['init','connect','watch']);
+    grunt.registerTask('deploy_github', ['init','exec:deploy_github','clean']);
+    grunt.registerTask('clean_github', ['exec:clean_github']);
 };

@@ -1,7 +1,7 @@
 {
   "name": "NKS_Flowers",
   "title": "NKS_Flowers",
-  "version": "1.0.0",
+  "version": "1.0.0-VPS",
   "homepage": "http://nks-flowers.fr/",
   "author": "NKS Flowers",
   "dependencies": {
@@ -15,6 +15,7 @@
     "grunt-contrib-htmlmin": "^0.4.0",
     "grunt-contrib-less": "~0.11.4",
     "grunt-contrib-uglify": "~0.5.1",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-exec": "^0.4.6"
   }
 }
