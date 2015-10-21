@@ -112,6 +112,35 @@ $(document).ready(
     $("img.preload-img").each(function() {
       $(this).attr('src', $(this).attr('data-original'));
     });
+    /* time circle init */
+    $("#DateCountdown").TimeCircles({
+      "animation": "smooth",
+      "bg_width": 0.2,
+      "fg_width": 0.015,
+      "circle_bg_color": "#EEEEEE",
+      "time": {
+        "Days": {
+          "text": "Jours",
+          "color": "#CCCCCC",
+          "show": true
+        },
+        "Hours": {
+          "text": "Heures",
+          "color": "#CCCCCC",
+          "show": true
+        },
+        "Minutes": {
+          "text": "Minutes",
+          "color": "#CCCCCC",
+          "show": true
+        },
+        "Seconds": {
+          "text": "Secondes",
+          "color": "#CCCCCC",
+          "show": true
+        }
+      }
+    });
 
     // init lazy scripts
     var js,

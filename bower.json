@@ -28,7 +28,8 @@
     "spinkit": "~1.0.1",
     "purl": "~2.3.1",
     "bootstrap-magnify": "~0.3.0",
-    "jquery.lazyload": "~1.9.7"
+    "jquery.lazyload": "~1.9.7",
+    "timecircles": "~1.5.3"
   },
   "devDependencies": {}
 }
