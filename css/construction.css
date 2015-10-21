@@ -18,11 +18,14 @@
   position: relative;
   margin: 0;
   padding: 0;
+  overflow-y: auto;
 }
 .index-construction #bg-color {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-color: rgba(0, 0, 0, 0.55);
   position: relative;
   margin: 0;
   padding: 0;
@@ -30,10 +33,11 @@
 .index-construction #presentation #logo {
   margin-left: auto;
   margin-right: auto;
+  padding: 0;
 }
 .index-construction #presentation .presentation-containeur {
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   color: black;
   font-size: 20px;
   padding-top: 25px;
@@ -49,8 +53,15 @@
   margin-bottom: 10px;
   font-weight: 700;
 }
+.index-construction #presentation .presentation-containeur:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.index-construction #presentation .detail-containeur {
+  font-size: 20px;
+  padding-top: 25px;
+}
 .index-construction #prochaine-vp {
-  background-color: rgba(56, 56, 56, 0.85);
+  background-color: rgba(56, 56, 56, 0.8);
   color: white;
   font-weight: 700;
   font-size: 20px;

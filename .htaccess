@@ -16,7 +16,9 @@ RewriteEngine On
 RewriteRule /vp-(.*).html /index-vp-sapin-noel.html [R=301,L]
 RewriteRule /box-(.*).html /index-vp-sapin-noel.html [R=301,L]
 RewriteRule /index.html /index-vp-sapin-noel.html [R=301,L]
+RewriteRule /l /index-vp-sapin-noel.html [R=301,L]
 </IfModule>
+
 
 # BEGIN Expire headers
 <IfModule mod_expires.c>
