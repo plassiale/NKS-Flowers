@@ -1,60 +1,68 @@
 @import "variables.less";
 @import "mixins.less";
 .index-construction {
-  color    : white;
+  color: white;
   font-size: 700;
   #bg {
-    background-image   : url("../img/header-bg-nks-flowers.jpg");
-    background-repeat  : no-repeat;
+    background-image: url("../img/header-bg-nks-flowers.jpg");
+    background-repeat: no-repeat;
     background-position: center center;
     .background-cover();
-    height             : 100%;
-    position           : relative;
-    margin             : 0;
-    padding            : 0;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
   }
   #bg-color {
-    width           : 100%;
-    height          : 100%;
-    background-color: fade(black,20%);
-    position        : relative;
-    margin          : 0;
-    padding         : 0;
+    .background-cover();
+    background-color: fade(black,55%);
+    position: relative;
+    margin: 0;
+    padding: 0;
   }
   #presentation {
     #logo {
-      margin-left : auto;
+      margin-left: auto;
       margin-right: auto;
+      padding: 0;
     }
     .presentation-containeur {
-      border-radius   : 5px;
-      background-color: fade(white,70%);
-      color           : black;
-      font-size       : 20px;
-      padding-top     : 25px;
+      border-radius: 5px;
+      background-color: white;
+      color: black;
+      font-size: 20px;
+      padding-top: 25px;
       .heading-font;
       .intro {
         background-color: fade(@brand-primary,40%);
-        padding-top     : 10px;
+        padding-top: 10px;
         padding-bottom: 10px;
-        padding         : 20px;
-        margin-top      : 10px;
-        margin-bottom   : 10px;
-        font-weight     : 700;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
       }
+    }
+    .presentation-containeur:hover {
+      background-color: fade(white,40%);
+    }
+    .detail-containeur {
+      font-size: 20px;
+      padding-top: 25px;
     }
   }
   #prochaine-vp {
-    background-color: fade(@gray,85%);
-    color           : white;
-    font-weight     : 700;
-    font-size       : 20px;
+    background-color: fade(@gray,80%);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
     #DateCountdown {
-      width         : 500px;
-      margin-left   : auto;
-      margin-right  : auto;
-      margin-top    : 25px;
-      margin-bottom : 0;
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 25px;
+      margin-bottom: 0;
       padding-bottom: 0;
     }
     .btn-vp {
@@ -68,12 +76,12 @@
   }
   #contact {
     background-color: fade(@gray,80%);
-    color           : white;
+    color: white;
   }
   section {
-    padding-top   : 35px !important;
+    padding-top: 35px !important;
     padding-bottom: 35px !important;
-    margin        : 0 !important;
+    margin: 0 !important;
   }
   .btn-detail {
     width: 100%;
