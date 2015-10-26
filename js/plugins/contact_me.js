@@ -67,7 +67,6 @@ $(function() {
     },
   });
 
-
   $("#contactFormNews input").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
