@@ -25,10 +25,17 @@
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-color: rgba(0, 0, 0, 0.55);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   position: relative;
   margin: 0;
   padding: 0;
+  border: 0;
+}
+.index-construction #presentation {
+  /*.presentation-containeur:hover {
+      background-color: fade(white,40%);
+    }*/
 }
 .index-construction #presentation #logo {
   margin-left: auto;
@@ -53,26 +60,52 @@
   margin-bottom: 10px;
   font-weight: 700;
 }
-.index-construction #presentation .presentation-containeur:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+.index-construction #presentation .presentation-containeur .intro h1 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 .index-construction #presentation .detail-containeur {
   font-size: 20px;
-  padding-top: 25px;
+}
+.index-construction #presentation .detail-containeur .societe {
+  color: white !important;
+}
+.index-construction #presentation .detail-containeur li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.index-construction #presentation .detail-containeur li i {
+  padding-right: 10px;
+}
+.index-construction #presentation .detail-containeur p,
+.index-construction #presentation .detail-containeur ul,
+.index-construction #presentation .detail-containeur li {
+  font-size: 20px !important;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.index-construction #prochaine-vp h1,
+.index-construction #contact h1 {
+  font-size: 20px;
+  text-transform: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  font-weight: 300;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .index-construction #prochaine-vp {
   background-color: rgba(56, 56, 56, 0.8);
   color: white;
-  font-weight: 700;
-  font-size: 20px;
 }
 .index-construction #prochaine-vp #DateCountdown {
   width: 500px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25px;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  padding: 0;
 }
 .index-construction #prochaine-vp .btn-vp {
   margin-top: 70px;
@@ -81,6 +114,10 @@
   .index-construction #prochaine-vp .btn-vp {
     margin-top: 0;
   }
+}
+.index-construction #prochaine-vp .sapin {
+  font-size: 25px;
+  font-weight: 700;
 }
 .index-construction #contact {
   background-color: rgba(56, 56, 56, 0.8);
