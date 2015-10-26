@@ -108,7 +108,7 @@
   padding: 0;
 }
 .index-construction #prochaine-vp .btn-vp {
-  margin-top: 70px;
+  margin-top: 30px;
 }
 @media (max-width: 767px) {
   .index-construction #prochaine-vp .btn-vp {
@@ -122,6 +122,7 @@
 .index-construction #contact {
   background-color: rgba(56, 56, 56, 0.8);
   color: white;
+  padding-top: 0 !important;
 }
 .index-construction section {
   padding-top: 35px !important;
