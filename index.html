@@ -37,8 +37,8 @@
   <link href="css/construction.css?v=${version}" rel="stylesheet" type='text/css'>
 
   <!-- fonts -->
-  <link href="//fonts.googleapis.com/css?family=Kaushan+Script:400,700|family=Montserrat:400,700|Droid+Serif:400,700,400italic,700italic|family=Roboto+Slab:400,100,300,700" rel="stylesheet" type='text/css'>
-
+  <link href="//fonts.googleapis.com/css?family=Kaushan+Script:400,700|family=Montserrat:400,700|Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type='text/css'>
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type='text/css'>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,7 +50,6 @@
 </head>
 
 <body class="index-construction">
-  <div id="fb-root"></div>
   <div id="bg">
     <div id="bg-color">
       <section id="presentation">
@@ -62,76 +61,87 @@
                   <img id="logo" src="img/logo-nks-flowers.png" alt="logo" title="nks flowers logo" class="img-responsive" />
                 </div>
                 <div class="intro">
-                  Abonnements mensuels, boxs et ventes privées de végétaux.
+                  <h1>
+                    <span class="hidden">NKS Flowers</span>Abonnements mensuels, boxs et ventes privées de végétaux.</h1>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-8 detail-containeur">
+            <div class="col-md-8 detail-containeur text-justify">
               <div>
                 <p>
-                  NKS Flowers est une entreprise basée à Lyon qui livre dans votre CE (et les particuliers sous condition) des végétaux toute l'année.
+                  <strong>NKS Flowers</strong> est une entreprise
+                  <strong>Lyonnaise</strong> spécialisée dans la
+                  <strong>vente de végétaux</strong> : fleurs, arbustes, ... produits dans le
+                  <strong>Rhône</strong> . Nous livrons dans votre
+                  <strong>Comité d'Entreprise</strong> (particuliers sous conditions) toute l'année vos
+                  <strong>arbres</strong> et
+                  <strong>plantes</strong>.
                 </p>
+
                 <p>
-                  Nous vous proposons trois formules :
+                  Prochainement sur le site :
                 </p>
-                <p>
-                  <ul>
-                    <li>
-                      les abonnements mensuels : des végétaux différents tous les 3, 6, 12 mois
-                    </li>
-                    <li>
-                      les boxs : boite contenant des végétaux et pas que !
-                    </li>
-                    <li>
-                      les ventes privées : ventes saisonnières groupée aux meilleurs prix
-                    </li>
-                  </ul>
-                </p>
+                <ul>
+                  <li>
+                    <i class="fa fa-1x fa-check "></i><u><strong>Abonnements Mensuels</strong></u> : des végétaux différents tous les 3, 6 ou 12 mois
+                  </li>
+                  <li>
+                    <i class="fa fa-1x fa-check "></i><u><strong>Boxs</strong></u> : boite contenant des végétaux et pas que !
+                  </li>
+                  <li>
+                    <i class="fa fa-1x fa-check "></i><u><strong>Ventes Privées</strong></u> : ventes saisonnières aux meilleurs prix
+                  </li>
+                </ul>
               </div>
               <div class="text-center">
+                <div id="fb-root"></div>
                 <span class="fb-like" data-href="http://nks-flowers.fr" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></span>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <section id="prochaine-vp">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9 text-center detail-vp">
-              Prochaine vente privée "Sapin de Noël" dans
-              <div id="DateCountdown" data-date="2015-11-15 00:00:00"></div>
-            </div>
-            <div class="col-md-3">
-              <a href="index-vp-sapin-noel.html" class="btn btn-xl btn-primary btn-detail btn-vp "> Voir la vente</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="container">
-          <form name="sentMessage" id="contactForm" novalidate>
+      <div id="animation-wrapper">
+        <section id="prochaine-vp">
+          <div class="container">
+            <h1>Notre prochaine
+              <strong>Vente Privée</strong> "
+              <span class="sapin">sapin de noël</span>" commence le
+              <strong>15 novembre 2015</strong>, plus que :</h1>
             <div class="row">
-              <div class="col-md-9">
-                <div class="form-group input-group input-group-lg">
-                  <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-envelope"></span>
-                  </span>
-                  <input type="email" class="form-control" placeholder="E-mail *" id="email" required data-validation-required-message="Merci de saisir votre adresse e-mail">
-                </div>
+              <div class="col-md-9 text-center detail-vp">
+                <div id="DateCountdown" data-date="2015-11-15 00:00:00"></div>
               </div>
               <div class="col-md-3">
-                <div id="success"></div>
-                <button type="submit" class="btn btn-xl btn-primary btn-detail">Tenez moi informé</button>
+                <a href="index-vp-sapin-noel.html" class="btn btn-xl btn-primary btn-detail btn-vp "> Voir la vente</a>
               </div>
             </div>
-          </form>
-        </div>
-      </section>
-
+          </div>
+        </section>
+        <section id="contact">
+          <div class="container">
+            <h1>Pour être informé des
+              <strong>offres</strong> et du lancement complet, envoyez nous votre e-mail :</h1>
+            <form name="sentMessage" id="contactForm" novalidate>
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="form-group input-group input-group-lg">
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-envelope"></span>
+                    </span>
+                    <input type="email" class="form-control" placeholder="E-mail *" id="email" required data-validation-required-message="Merci de saisir votre adresse e-mail">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div id="success"></div>
+                  <button type="submit" class="btn btn-xl btn-primary btn-detail">Tenez moi informé</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
       <footer>
         <div class="container">
           <div class="row">
@@ -142,7 +152,19 @@
 
       <!-- script loading in this page to improve loading after when site will be up -->
       <script src="js/custom.min.js?v=${version}"></script>
+      <script>
+        function vpUpStartAnim() {
+          $('#prochaine-vp').addClass('animated bounce');
+          setTimeout(vpUpStopAnim, 1000);
+        }
 
+        function vpUpStopAnim() {
+          $('#prochaine-vp').removeClass('animated bounce');
+          setTimeout(vpUpStartAnim, 20000);
+        }
+
+        vpUpStopAnim();
+      </script>
     </div>
   </div>
 </body>

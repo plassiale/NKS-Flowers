@@ -1,69 +1,102 @@
 @import "variables.less";
 @import "mixins.less";
 .index-construction {
-  color: white;
+  color    : white;
   font-size: 700;
   #bg {
-    background-image: url("../img/header-bg-nks-flowers.jpg");
-    background-repeat: no-repeat;
+    background-image   : url("../img/header-bg-nks-flowers.jpg");
+    background-repeat  : no-repeat;
     background-position: center center;
     .background-cover();
-    height: 100%;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
+    height             : 100%;
+    position           : relative;
+    margin             : 0;
+    padding            : 0;
+    overflow-y         : auto;
   }
   #bg-color {
     .background-cover();
-    background-color: fade(black,55%);
-    position: relative;
-    margin: 0;
-    padding: 0;
+    height          : 100%;
+    background-color: fade(black,50%);
+    position        : relative;
+    margin          : 0;
+    padding         : 0;
+    border          : 0;
   }
   #presentation {
     #logo {
-      margin-left: auto;
+      margin-left : auto;
       margin-right: auto;
-      padding: 0;
+      padding     : 0;
     }
     .presentation-containeur {
-      border-radius: 5px;
+      border-radius   : 5px;
       background-color: white;
-      color: black;
-      font-size: 20px;
-      padding-top: 25px;
+      color           : black;
+      font-size       : 20px;
+      padding-top     : 25px;
       .heading-font;
       .intro {
         background-color: fade(@brand-primary,40%);
-        padding-top: 10px;
+        padding-top     : 10px;
         padding-bottom: 10px;
-        padding: 20px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-weight: 700;
+        padding         : 20px;
+        margin-top      : 10px;
+        margin-bottom   : 10px;
+        font-weight     : 700;
+        h1 {
+          font-size: 20px;
+          margin   : 0;
+          padding  : 0;
+        }
       }
     }
-    .presentation-containeur:hover {
+    /*.presentation-containeur:hover {
       background-color: fade(white,40%);
-    }
+    }*/
     .detail-containeur {
       font-size: 20px;
-      padding-top: 25px;
+      .societe {
+        color: white !important;
+      }
+      li {
+        list-style-type: none;
+        margin         : 0;
+        padding        : 0;
+        i {
+          padding-right: 10px;
+        }
+      }
+      p,
+      ul,
+      li {
+        font-size  : 20px !important;
+        font-weight: 300;
+        margin-top : 10px;
+      }
+    }
+  }
+  #prochaine-vp,
+  #contact {
+    h1 {
+      font-size     : 20px;
+      text-transform: none;
+      text-align    : left;
+      margin        : 0;
+      padding       : 0;
+      padding-bottom: 10px;
+      font-weight   : 300;
+      .body-font;
     }
   }
   #prochaine-vp {
     background-color: fade(@gray,80%);
-    color: white;
-    font-weight: 700;
-    font-size: 20px;
+    color           : white;
     #DateCountdown {
-      width: 500px;
-      margin-left: auto;
+      width       : 500px;
+      margin-left : auto;
       margin-right: auto;
-      margin-top: 25px;
-      margin-bottom: 0;
-      padding-bottom: 0;
+      padding     : 0;
     }
     .btn-vp {
       margin-top: 70px;
@@ -73,15 +106,19 @@
         margin-top: 0;
       }
     }
+    .sapin {
+      font-size  : 25px;
+      font-weight: 700;
+    }
   }
   #contact {
     background-color: fade(@gray,80%);
-    color: white;
+    color           : white;
   }
   section {
-    padding-top: 35px !important;
+    padding-top   : 35px !important;
     padding-bottom: 35px !important;
-    margin: 0 !important;
+    margin        : 0 !important;
   }
   .btn-detail {
     width: 100%;

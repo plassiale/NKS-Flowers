@@ -4672,6 +4672,7 @@ $(document).ready(
       $(this).attr('src', $(this).attr('data-original'));
     });
     /* time circle init */
+    /* http://git.wimbarelds.nl/TimeCircles/index.html */
     $("#DateCountdown").TimeCircles({
       "animation": "smooth",
       "bg_width": 0.2,
