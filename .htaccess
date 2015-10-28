@@ -11,14 +11,6 @@ SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip
 #les proxies doivent donner le bon contenu
 Header append Vary User-Agent env=!dont-vary
 
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule /vp-(.*).html /index.html [R=301,L]
-RewriteRule /box-(.*).html /index.html [R=301,L]
-RewriteRule /popup-(.*).html /index.html [R=301,L]
-</IfModule>
-
-
 # BEGIN Expire headers
 <IfModule mod_expires.c>
  ExpiresActive On
