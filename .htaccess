@@ -15,6 +15,7 @@ Header append Vary User-Agent env=!dont-vary
 RewriteEngine On
 RewriteRule /vp-(.*).html /index.html [R=301,L]
 RewriteRule /box-(.*).html /index.html [R=301,L]
+RewriteRule /popup-(.*).html /index.html [R=301,L]
 </IfModule>
 
 

@@ -46,6 +46,12 @@ module.exports = function(grunt) {
         src: '.htaccess',
         dest: 'dist/'
       },
+      news: {
+        expand: true,
+        src: '*.jpeg',
+        cwd: 'news/',
+        dest: 'dist/news/'
+      },
       favicon: {
         expand: true,
         src: '*',
