@@ -86,8 +86,8 @@
   font-weight: 300;
   margin-top: 10px;
 }
-.index-construction #prochaine-vp h1,
-.index-construction #contact h1 {
+.index-construction #prochaine-vp h2,
+.index-construction #contact h2 {
   font-size: 20px;
   text-transform: none;
   text-align: left;
@@ -102,18 +102,16 @@
   color: white;
 }
 .index-construction #prochaine-vp #DateCountdown {
-  width: 500px;
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
 }
-.index-construction #prochaine-vp .btn-vp {
-  margin-top: 30px;
+.index-construction #prochaine-vp #DateCountdown h4 {
+  font-size: 12px !important;
 }
-@media (max-width: 767px) {
-  .index-construction #prochaine-vp .btn-vp {
-    margin-top: 0;
-  }
+.index-construction #prochaine-vp .btn-vp {
+  margin-top: 0;
 }
 .index-construction #prochaine-vp .sapin {
   font-size: 25px;
