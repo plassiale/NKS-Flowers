@@ -38,7 +38,7 @@ tagAnalyticsCNIL.CookieConsent = function() {
         div.setAttribute('id','cookie-banner');
         div.setAttribute('width','100%');
         // Le code HTML de la demande de consentement
-        div.innerHTML =  '<div style="    z-index: 1; top:0px;width:100%;position:fixed;background-color:#fff;text-align:center;padding:5px;font-size:12px;\
+        div.innerHTML =  '<div style="color : black; z-index: 1; top:0px;width:100%;position:fixed;background-color:#fff;text-align:center;padding:5px;font-size:12px;\
         border-bottom:1px solid #eeeeee;" id="cookie-banner-message" align="center">En continuant votre navigation sur ce site, \
         vous acceptez l\'utilisation des cookies afin d\'assurer le bon déroulement de votre visite \
         et de réaliser des statistiques d\'audience.<a href="javascript:tagAnalyticsCNIL.CookieConsent.hideInform();" style="text-decoration:underline;">Continuer</a>  <a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()" \
@@ -138,7 +138,7 @@ tagAnalyticsCNIL.CookieConsent = function() {
         div.style.zIndex = "1";
         // Le code HTML de la demande de consentement
         // Vous pouvez modifier le contenu ainsi que le style
-        div.innerHTML =  '<div class="text-muted text-justify" style="width: 300px; background-color: white; repeat scroll 0% 0% white;\
+        div.innerHTML =  '<div class="color : black; text-muted text-justify" style="width: 300px; background-color: white; repeat scroll 0% 0% white;\
         border: 1px solid #cccccc; padding :10px 10px;text-align:center; position: fixed; top:30px; \
         left:50%; margin-top:0px; margin-left:-150px; z-index:100000; opacity:1" id="inform-and-consent">\
         <div><span><b>Les cookies Google Analytics</b></span></div><br><div>Ce site utilise  des cookies\
