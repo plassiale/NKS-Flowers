@@ -117,6 +117,10 @@
   font-size: 25px;
   font-weight: 700;
 }
+.index-construction #prochaine-vp h3 {
+  text-transform: none !important;
+  margin-left: 50px;
+}
 .index-construction #contact {
   background-color: rgba(56, 56, 56, 0.8);
   color: white;
