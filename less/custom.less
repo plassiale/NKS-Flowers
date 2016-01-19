@@ -1,6 +1,5 @@
 @import "variables.less";
 @import "mixins.less";
-
 // Global Components
 body {
   overflow-x: hidden;
@@ -56,7 +55,6 @@ h6 {
 .bg-darkest-gray {
   background-color: @gray-darkest;
 }
-
 // Restyled Primary Buttons
 .btn-primary {
   .button-variant(white; @brand-primary; @brand-primary);
@@ -92,7 +90,6 @@ h6 {
 #arrow-down {
   color: white;
 }
-
 // Custom Navigation Bar
 .navbar-default {
   background-color: @gray-darkest;
@@ -179,7 +176,6 @@ h6 {
     }
   }
 }
-
 /* div for loader */
 .preloader {
   align-items    : center;
@@ -310,7 +306,6 @@ h6 {
     }
   }
 }
-
 // Global Section Styles
 section {
   padding: 50px 0;
@@ -335,7 +330,6 @@ section {
     background-color: white;
   }
 }
-
 // Services Section
 @media(min-width:768px) {
   .service {
@@ -362,7 +356,6 @@ section {
     margin-top: 50px;
   }
 }
-
 // Portfolio Section
 #portfolio {
   .portfolio-item {
@@ -438,7 +431,6 @@ section {
     }
   }
 }
-
 // Timeline
 .timeline {
   list-style: none;
@@ -618,14 +610,12 @@ section {
     }
   }
 }
-
 // Clients Aside
 aside.clients {
   img {
     margin: 50px auto;
   }
 }
-
 // Contact Section
 section#contact {
   background-color: @gray-darkest;
@@ -682,7 +672,6 @@ section#contact {
   height          : 100%;
   margin          : 0;
 }
-
 // Footer
 footer {
   padding   : 25px 0;
@@ -699,7 +688,6 @@ footer {
     text-transform: none;
   }
 }
-
 // Social Buttons
 ul.social-buttons {
   margin-bottom: 0;
@@ -731,7 +719,6 @@ ul.social-buttons {
 .btn:active:focus {
   outline: none;
 }
-
 // Highlight Color Customization
  ::-moz-selection {
   text-shadow: none;
@@ -772,7 +759,6 @@ body,
 }
 .modal-text {
   top: 20px;
-  
   /* BIENTOT*/
   .alizarin {
     background: @brand-primary;
@@ -835,7 +821,6 @@ body,
     padding       : 10px;
     border-top    : 1px solid @brand-primary;
   }
-  
   /* SAPIN */
   .sapin-img,
   .sapin-text-header {
@@ -876,7 +861,6 @@ body,
   .subscript {
     font-size: 25px;
   }
-  
   /* CSS-only ribbon styles    */
   .cnrflash {
     /*Position correctly within container*/
@@ -998,14 +982,12 @@ body,
     margin-top: 20px;
   }
 }
-
 /* help seo for em and strong tag, but apply a normal font */
 em.seo,
 strong.seo {
   font-weight: normal;
   font-style : normal;
 }
-
 /* popup */
 .modal {
   .modal-dialog {
@@ -1015,7 +997,6 @@ strong.seo {
     color: darken(@brand-primary, 10%);
   }
 }
-
 /* reassurrance */
 #reassurrance {
   background-color: @brand-primary;
@@ -1044,4 +1025,18 @@ strong.seo {
       }
     }
   }
+}
+.reassurrance-sv {
+  background-color: #AA004F !important;
+}
+.sv-color-violet {
+  color: #47398E !important;
+}
+.btn-sv {
+  background-color: #AA004F !important;
+  color           : white !important;
+  border          : 1px solid #47398E !important;
+}
+.detail-vente-sv h3 {
+  border-bottom: 2px solid #AA004F !important;
 }
