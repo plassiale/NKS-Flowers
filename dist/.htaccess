@@ -1,3 +1,5 @@
+Redirect 301 /SV.html /index-vp-saint-valentin.html
+
 # MOD_DEFLATE COMPRESSION
 SetOutputFilter DEFLATE
 AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript application/x-httpd-php

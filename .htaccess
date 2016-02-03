@@ -1,3 +1,8 @@
+
+Redirect 301 /SV.html /index-vp-saint-valentin.html
+#flash-code depuis l'affiche
+Redirect 301 /VP-SV.html /index-vp-saint-valentin.html??utm_source=flash-code&utm_medium=flyer&utm_campaign=saint-valentin
+
 # MOD_DEFLATE COMPRESSION
 SetOutputFilter DEFLATE
 AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript application/x-httpd-php
